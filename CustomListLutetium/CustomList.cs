@@ -23,11 +23,25 @@ namespace CustomListLutetium
 
         public void Add(T itemToAdd)
         {
+            
+            
+
             if (count == capacity)
             {
                 //create new  array
                 //move items over
                 //new array is now _items array.
+                capacity *= 2;
+                T[] _items2 = new T[capacity];
+
+                for (int i = 0; i < _items.Length; i++)
+                {
+                    _items2[i] = _items[i];
+                }
+
+                _items = _items2;
+
+
             }
             _items[count] = itemToAdd;
             count++;
