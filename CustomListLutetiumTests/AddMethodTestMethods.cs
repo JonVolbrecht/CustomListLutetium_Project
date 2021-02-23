@@ -102,20 +102,26 @@ namespace CustomListLutetiumTests
         public void Add_AddItemCapacityIncreases() // test that the capacity of your array doubles when you add one more than
             // the initial capacity
         {
-            //Arrange
+            // arrange
             CustomList<int> test = new CustomList<int>();
-            int items = 10;
+            int expected = 10;
             int actual;
 
-            //Actual
-            for (int i = 0, i < items, i++)
-            {
-                test.Add(i);
-            }
+            // act
+            test.Add(234);
+            test.Add(235);
+            test.Add(236);
+            test.Add(237);
+            test.Add(238);
+            test.Add(239);
+            test.Add(240);
+            test.Add(241);
+            test.Add(242);
+            test.Add(243);
+            actual = test.Capacity;
 
-            //Assert
-            
-
+            // assert
+            Assert.AreEqual(expected, actual);
 
         }
 
