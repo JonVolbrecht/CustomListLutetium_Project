@@ -14,11 +14,24 @@ namespace CustomListLutetium
         private int count;
         private int capacity;
 
+
         public CustomList()
         {
             count = 0;
             capacity = 4;
             _items = new T[capacity];
+        }
+
+        public int Count
+        {
+            get { return count; }
+            
+        }
+
+        public int Capacity
+        {
+            get { return capacity; }
+
         }
 
         public void Add(T itemToAdd)
