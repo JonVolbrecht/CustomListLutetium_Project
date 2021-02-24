@@ -21,6 +21,7 @@ namespace CustomListLutetiumTests
 
             //Act
             test.Remove(14);
+
             int actual = test[0];
 
             //Assert
@@ -46,6 +47,7 @@ namespace CustomListLutetiumTests
 
             //Act
             test.Remove(17);
+
             int actual = test[7];
 
             //Assert
@@ -62,13 +64,13 @@ namespace CustomListLutetiumTests
             test.Add(2);
             test.Add(3);
             test.Add(4);
-            int expected = test.Count;
+            int expected = 5;
 
             // Act
             test.Remove(5);
-            int actual = test.Count;
 
             // Assert
+            int actual = test.Count;
             Assert.AreEqual(expected, actual);
         }
 
