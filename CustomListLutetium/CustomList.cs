@@ -60,5 +60,11 @@ namespace CustomListLutetium
             count++;
         }
 
+        public void Remove()
+        {
+            
+        }
+       
+
     }
 }
