@@ -53,8 +53,24 @@ namespace CustomListLutetiumTests
         }
 
         [TestMethod]
-        public void Remove_
+        public void Remove_ValueNotInList()
+        {
+            // Arrange
+            CustomList<int> test = new CustomList<int>();
+            test.Add(0);
+            test.Add(1);
+            test.Add(2);
+            test.Add(3);
+            test.Add(4);
+            int expected = test.Count;
 
+            // Act
+            test.Remove(5);
+            int actual = test.Count;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
 
 
     }
