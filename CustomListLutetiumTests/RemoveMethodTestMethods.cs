@@ -72,6 +72,49 @@ namespace CustomListLutetiumTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void Remove_VerifyIfOneOfMultiplesRemoved()
+        {
+            // arrange
+            CustomList<int> test = new CustomList<int>();
+            int expected = 2;
+            int actual;
+
+            // act
+            test.Add(4);
+            test.Add(5);
+            test.Add(5);
+            test.Remove(5);
+
+
+            actual = test.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestMethod]
+        public void Remove_VerifyIfMultipleRemovedCountDecreases()
+        {
+            // arrange
+            CustomList<int> test = new CustomList<int>();
+            int expected = 1;
+            int actual;
+
+            // act
+            test.Add(234);
+            test.Add(235);
+            test.Add(235);
+            test.Remove(235);
+            test.Remove(235);
+
+            actual = test.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 
