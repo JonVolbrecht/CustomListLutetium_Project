@@ -60,9 +60,21 @@ namespace CustomListLutetium
             count++;
         }
 
-        public void Remove()
+        public void Remove(T itemToRemove)
         {
-            
+            for (int i = 0; i < count; i++)
+            {
+                if (_items[i].Equals(itemToRemove))
+                {
+                    count--;
+                    for (; i < count; i++)
+                    {
+                        _items[i] = _items[i + 1];
+                    }
+                    _items[count] = default(T);
+                    break;
+                }
+            }
         }
        
 
