@@ -31,7 +31,22 @@ namespace CustomListLutetiumTests
         }
 
         [TestMethod]
+        //Arrange
+        public void ToString_VerifyCombinationCorrectly()
+        {
+            //Arrange
+            CustomList<int> test = new CustomList<int>();
+            test.Add(1);
+            test.Add(2);
+            test.Add(3);
+            string expected = "123";
 
+            //Act
+            string actual = test.ToString();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
 
 
 
