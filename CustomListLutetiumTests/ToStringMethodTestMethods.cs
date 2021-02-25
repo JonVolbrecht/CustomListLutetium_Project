@@ -67,7 +67,35 @@ namespace CustomListLutetiumTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ToString_NoItemsInList_EmptyString()
+        {
+            //Arrange
+            CustomList<int> test = new CustomList<int>();
+            string expected = "12345";
+            int itemsToAdd = 10;
 
+            for (int i = 0; i < itemsToAdd; i++)
+            {
+                test.Add(i);
+            }
+
+            //Act
+            string actual = test.ToString();
+
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+
+
+
+
+
+
+
+        }
 
 
 
