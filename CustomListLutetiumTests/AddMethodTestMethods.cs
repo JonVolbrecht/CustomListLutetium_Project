@@ -26,6 +26,7 @@ namespace CustomListLutetiumTests
 
         }
 
+        [TestMethod]
         public void Add_VerifyIndexValueZero()
         {
             //Arrange
@@ -43,6 +44,7 @@ namespace CustomListLutetiumTests
 
         }
 
+        [TestMethod]
         public void Add_VerifyIndexValueOne()
         {
             //Arrange
@@ -64,6 +66,7 @@ namespace CustomListLutetiumTests
 
         }
 
+        [TestMethod]
         public void Add_VerifyIndexValueSix()
         {
             //Arrange
@@ -100,12 +103,13 @@ namespace CustomListLutetiumTests
 
         }
 
+        [TestMethod]
         public void Add_AddItemCapacityIncreases() // test that the capacity of your array doubles when you add one more than
             // the initial capacity
         {
             // arrange
             CustomList<int> test = new CustomList<int>();
-            int expected = 10;
+            int expected = 16;
             int actual;
 
             // act

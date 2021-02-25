@@ -15,7 +15,7 @@ namespace CustomListLutetiumTests
             CustomList<int> test = new CustomList<int>();
 
             int itemsToAdd = 10;
-            string expected = "{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }";
+            string expected = "123456789";
 
             for (int i = 0; i < itemsToAdd; i++)
             {
@@ -31,7 +31,6 @@ namespace CustomListLutetiumTests
         }
 
         [TestMethod]
-        //Arrange
         public void ToString_VerifyCombinationCorrectly()
         {
             //Arrange
@@ -48,8 +47,25 @@ namespace CustomListLutetiumTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void ToString_VerifyIfStringListBecomesString()
+        {
+            //Arrange
+            CustomList<string> test = new CustomList<string>();
+            string expected = "pizza,poptart,popcorn,";
+            string actual;
 
 
+            //Act
+            test.Add("pizza");
+            test.Add("poptart");
+            test.Add("popcorn");
+
+            actual = test.ToString();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
 
 
 

@@ -77,6 +77,25 @@ namespace CustomListLutetium
             }
         }
        
+        //Indexer
+        public T this[int index]
+        {
+            get
+            {
+                return _items[index];
+            }
+
+            set 
+            {
+                _items[index] = value;
+            }
+        }
+
+
+
+
+
+
 
     }
 }
