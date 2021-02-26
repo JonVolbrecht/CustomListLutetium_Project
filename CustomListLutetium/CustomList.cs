@@ -91,9 +91,15 @@ namespace CustomListLutetium
             }
         }
 
-        public void ToString()
+        public override string ToString()
         {
+            string result = "";
 
+            for (int i = 0; i < count; i++)
+            {
+                result += Convert.ToString(_items[i]);
+            }
+            return result;
         }
 
 
