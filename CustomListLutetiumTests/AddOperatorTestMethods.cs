@@ -97,7 +97,28 @@ namespace CustomListLutetiumTests
             Assert.AreEqual(expected, acutual);
         }
 
-        
+        [TestMethod]
+        public void AdditionOperator_VerifyCountRemainsEqual()
+        {
+            // Arrange
+            int itemsToAdd = 40;
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3;
+
+            for (int i = 0; i < itemsToAdd; i++)
+            {
+                test1.Add(i);
+            }
+
+            // Act
+            test3 = test1 + test2;
+
+            // Assert
+            int expected = test1.Count;
+            int actual = test3.Count;
+            Assert.AreEqual(expected, actual);
+        }
 
 
 
