@@ -102,6 +102,26 @@ namespace CustomListLutetium
             return result;
         }
 
+        public static CustomList<T> operator +(CustomList<T> _items, CustomList<T> _items2)
+        {
+            CustomList<T> result;
+
+            result = _items;
+            foreach (T item in _items2)
+            {
+                result.Add(item);
+            }
+
+            return result;
+        }
+
+
+
+
+
+
+
+
 
 
 

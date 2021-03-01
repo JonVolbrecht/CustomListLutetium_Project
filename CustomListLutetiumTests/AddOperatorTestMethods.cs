@@ -36,7 +36,7 @@ namespace CustomListLutetiumTests
             // Arrange
             CustomList<int> test1 = new CustomList<int>();
             CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> test3 = new CustomList<int>();
+            CustomList<int> test3;
             int expected = test2.Count + test1.Count;
 
             // Act
@@ -54,7 +54,7 @@ namespace CustomListLutetiumTests
             int itemsToAdd = 10;
             CustomList<int> test1 = new CustomList<int>();
             CustomList<int> test2 = new CustomList<int>();
-            CustomList<int> test3 = new CustomList<int>();
+            CustomList<int> test3;
             for (int i = 0; i < itemsToAdd; i++)
             {
                 test1.Add(i);
