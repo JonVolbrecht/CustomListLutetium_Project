@@ -120,7 +120,34 @@ namespace CustomListLutetiumTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void AdditionOperator_VerifyListsCombineCounts()
+        {
+            //Arrange
+            int itemsToAdd = 20;
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3;
 
+            for (int i = 0; i < itemsToAdd; i++)
+            {
+                test1.Add(i);
+            }
+            for (int i = 0; i < (itemsToAdd * 3); i++)
+            {
+                test2.Add(i);
+            }
+
+            //Act
+            test3 = test1 + test2;
+
+
+            //Assert
+            int expected = test2.Count + test1.Count;
+            int actual = test3.Count;
+            Assert.AreEqual(expected, actual);
+
+        }
 
 
 
