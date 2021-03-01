@@ -115,7 +115,30 @@ namespace CustomListLutetium
             return result;
         }
 
+        public static CustomList<T> operator -(CustomList<T> _items, CustomList<T> _items2)
+        {
+            CustomList<T> result = new CustomList<T>();
+            if (_items.count > _items2.count)
+            {
+                for (int i = _items2.count; i < _items.count; i++)
+                {
+                    result.Add(_items[i]);
+                }
+            }
+            else if (_items2.count > _items.count)
+            {
+                for (int i = _items.count; i < _items2.count; i++)
+                {
+                    result.Add(_items2[i]);
+                }
+            }
+            else
+            {
+                return result;
+            }
 
+            return result;
+        }
 
 
 
