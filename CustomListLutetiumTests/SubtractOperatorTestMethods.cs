@@ -34,7 +34,7 @@ namespace CustomListLutetiumTests
         }
 
         [TestMethod]
-        public void SubtractOperator_VerifyListsSubtractAtIndesOne()
+        public void SubtractOperator_VerifyListsSubtractAtIndexOne()
         {
             //Arrange
             CustomList<int> test1 = new CustomList<int>();
@@ -42,9 +42,9 @@ namespace CustomListLutetiumTests
             CustomList<int> test3;
 
             test1.Add(1);
-            test1.Add(2);
             test1.Add(3);
-            test1.Add(4);
+            test1.Add(5);
+            test1.Add(7);
             test2.Add(2);
             test2.Add(4);
             test2.Add(6);
@@ -63,10 +63,29 @@ namespace CustomListLutetiumTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void SubtractOperator_VerifyCountOfListsDecrease()
+        {
+            //Arrange
+            int itemsToAdd = 40;
+            CustomList<int> test1 = new CustomList<int>();
+            for (int i = 0; i < itemsToAdd; i++)
+            {
+                test1.Add(i);
+            }
+            var test2 = new CustomList<int>() { 2, 3, 4, 5 };
+            var test3 = new CustomList<int>();
 
+            //Act
+            test3 = test1 - test2;
 
+            //Assert
+            int expected = test1.Count - test2.Count;
+            int actual = test3.Count;
+            Assert.AreEqual(expected, actual);
+        }
 
-
+        
 
 
 
