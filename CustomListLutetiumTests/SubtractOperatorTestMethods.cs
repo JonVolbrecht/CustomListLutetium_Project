@@ -109,35 +109,25 @@ namespace CustomListLutetiumTests
         }
 
         [TestMethod]
-        public void 
+        public void Subtraction_RemoveTwoListWithOneItem()
+        {
+            //Arrange
+            CustomList<int> test1 = new CustomList<int>();
+            CustomList<int> test2 = new CustomList<int>();
+            CustomList<int> test3;
+            int expected = 236;
+            int actual;
 
+            //Act
+            test1.Add(236);
+            test1.Add(234);
+            test2.Add(234);
+            test3 = test1 - test2;
+            actual = test3[0];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
 
 
     }
